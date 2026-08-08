@@ -50,8 +50,9 @@ export default function Navbar() {
   const servicesItems = ["Transport & Travel", "Accommodation", "Laundry"];
 
   return (
-    <nav ref={navRef} className="relative z-50 w-full bg-white font-sans text-zinc-900 tracking-tight">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12 lg:py-8">
+    // 💡 CHANGE THE NAV TAG CLASSES TO THIS:
+      <nav ref={navRef} className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-7xl rounded-none bg-white/80 backdrop-blur-md border border-white/20 font-sans text-zinc-900 tracking-tight shadow-[0_15px_30px_-5px_rgba(0,0,0,0.2)]">
+      <div className="mx-auto flex items-center justify-between px-6 py-1 md:px-10 md:py-1.5">
         
         {/* Left Side: Brand Logo */}
         <div className="nav-anim text-xl font-extrabold tracking-tighter sm:text-2xl">
