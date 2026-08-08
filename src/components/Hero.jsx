@@ -21,9 +21,8 @@ export default function Hero() {
     "/hero-gallery/pic10.jpg"
   ];
   
-  // Adjusted for aggressive downscaling: smaller widths on mobile, scaling up on tablets/desktops
   const widths = [
-    "w-24 sm:w-48 aspect-square",  // Mobile width (w-24), Desktop width (sm:w-48)
+    "w-24 sm:w-48 aspect-square",  
     "w-32 sm:w-56 aspect-[4/3]",   
     "w-20 sm:w-40 aspect-[3/4]",   
     "w-28 sm:w-52 aspect-video"
@@ -64,7 +63,7 @@ export default function Hero() {
   return (
     <section
       ref={compRef}
-      className="relative w-full min-h-screen overflow-hidden flex flex-col justify-between py-12 lg:py-24 bg-zinc-950 font-sans text-white"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col justify-between pt-24 bg-zinc-950 font-sans text-white"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -76,8 +75,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/20 to-zinc-950/50"></div>
       </div>
 
-      {/* TOP CONTAINER: Centered Content */}
-      <div className="relative z-10 mx-auto max-w-4xl text-center px-6 flex-grow flex flex-col justify-center items-center">
+      {/* TOP/CENTER CONTAINER: Centered typography pushed gracefully into viewport view */}
+      <div className="relative z-10 mx-auto max-w-4xl text-center px-6 mt-auto mb-auto flex flex-col justify-center items-center">
         <h1 className="min-h-[110px] xs:min-h-[130px] sm:min-h-[180px] text-3xl font-extrabold tracking-tight xs:text-4xl sm:text-6xl md:text-7xl leading-[1.2] xs:leading-[1.15]">
           <span className="typewriter-target border-b-4 border-orange-500 pb-2 inline-block"></span>
         </h1>
@@ -87,12 +86,11 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* MIDDLE CONTAINER: Responsive Downscaling Horizontal Carousel */}
-      <div className="hero-fade relative z-10 w-full overflow-hidden mt-8 lg:mt-12 py-4">
+      {/* BOTTOM CONTAINER: Carousel moved down tight against the baseline border */}
+      <div className="hero-fade relative z-10 w-full overflow-hidden mt-auto pt-4 pb-12">
         <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-zinc-950 to-transparent z-20 pointer-events-none"></div>
         <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-zinc-950 to-transparent z-20 pointer-events-none"></div>
 
-        {/* Changed gap-6 to gap-4 on mobile so the smaller images stay tucked neatly together */}
         <div ref={carouselRef} className="flex gap-4 sm:gap-6 w-max whitespace-nowrap px-4">
           {[...images, ...images].map((src, idx) => {
             const widthClass = widths[idx % widths.length];
@@ -112,17 +110,17 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* BOTTOM CONTAINER: Floating Offer Card */}
-      <div className="hero-fade relative z-10 mx-auto mt-8 lg:mt-12 px-6 w-full max-w-md flex justify-center">
-        <div className="w-full rounded-2xl border border-white/10 bg-zinc-900/80 p-5 text-center backdrop-blur-md shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] sm:p-6">
-          <h3 className="text-sm font-bold text-white sm:text-lg">
-            On a budget? <span className="text-orange-500">We Make Things Happen!</span>
-          </h3>
-          <p className="mt-2 text-[10px] font-semibold tracking-widest uppercase text-zinc-400 sm:text-xs">
-            From as low as <span className="text-sm font-extrabold text-orange-500 sm:text-base">KSH. 2,000</span>
-          </p>
-        </div>
-      </div>
+      {/* FLOATING OFFER CARD: Handled via absolute overlay translation down to bridge sections */}
+<div className="hero-fade absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 px-6 w-full max-w-xs flex justify-center"> {/* 💡 Changed max-w-md to max-w-xs */}
+  <div className="w-full rounded-xl border border-white/10 bg-zinc-900/90 p-3.5 text-center backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] sm:p-4"> {/* 💡 Reduced padding and corners slightly */}
+    <h3 className="text-xs font-bold text-white sm:text-sm"> {/* 💡 Shrunk text size slightly */}
+      On a budget? <span className="text-orange-500">We Make Things Happen!</span>
+    </h3>
+    <p className="mt-1 text-[9px] font-semibold tracking-widest uppercase text-zinc-400 sm:text-[10px]">
+      From as low as <span className="text-xs font-extrabold text-orange-500 sm:text-sm">KSH. 2,000</span>
+    </p>
+  </div>
+</div>
     </section>
   );
 }
