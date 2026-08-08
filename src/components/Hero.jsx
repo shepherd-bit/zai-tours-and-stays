@@ -110,17 +110,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* FLOATING OFFER CARD: Handled via absolute overlay translation down to bridge sections */}
-<div className="hero-fade absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 px-6 w-full max-w-xs flex justify-center"> {/* 💡 Changed max-w-md to max-w-xs */}
-  <div className="w-full rounded-xl border border-white/10 bg-zinc-900/90 p-3.5 text-center backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] sm:p-4"> {/* 💡 Reduced padding and corners slightly */}
-    <h3 className="text-xs font-bold text-white sm:text-sm"> {/* 💡 Shrunk text size slightly */}
-      On a budget? <span className="text-orange-500">We Make Things Happen!</span>
-    </h3>
-    <p className="mt-1 text-[9px] font-semibold tracking-widest uppercase text-zinc-400 sm:text-[10px]">
-      From as low as <span className="text-xs font-extrabold text-orange-500 sm:text-sm">KSH. 2,000</span>
-    </p>
-  </div>
-</div>
     </section>
   );
 }
