@@ -9,16 +9,16 @@ export default function Hero() {
   const carouselRef = useRef(null);
 
   const images = [
-    "/hero-gallery/pic1.jpg",
-    "/hero-gallery/pic2.jpg",
-    "/hero-gallery/pic3.jpg",
-    "/hero-gallery/pic4.jpg",
-    "/hero-gallery/pic5.jpg",
-    "/hero-gallery/pic6.jpg",
-    "/hero-gallery/pic7.jpg",
-    "/hero-gallery/pic8.jpg",
-    "/hero-gallery/pic9.jpg",
-    "/hero-gallery/pic10.jpg"
+    "./hero-gallery/pic1.jpg",
+    "./hero-gallery/pic2.jpg",
+    "./hero-gallery/pic3.jpg",
+    "./hero-gallery/pic4.jpg",
+    "./hero-gallery/pic5.jpg",
+    "./hero-gallery/pic6.jpg",
+    "./hero-gallery/pic7.jpg",
+    "./hero-gallery/pic8.jpg",
+    "./hero-gallery/pic9.jpg",
+    "./hero-gallery/pic10.jpg"
   ];
   
   const widths = [
