@@ -7,10 +7,11 @@ import CallToAction from "./components/CallToAction";
 import Testimonials from "./components/Testimonials";
 import AboutFounder from "./components/AboutFounder";
 import Footer from "./components/Footer";
+import FloatingContact from "./components/FloatingContact"; // Added this import
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans text-zinc-900 antialiased">
+    <div className="min-h-screen font-sans text-zinc-900 antialiased relative">
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +23,9 @@ export default function App() {
         <AboutFounder />
       </main>
       <Footer />
+      
+      {/* Global floating action layer */}
+      <FloatingContact /> 
     </div>
   );
 }
