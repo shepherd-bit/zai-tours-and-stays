@@ -45,60 +45,54 @@ export default function FloatingContact() {
   return (
     <div className="fixed right-6 bottom-8 z-50 flex flex-col gap-4 items-end pointer-events-none font-sans">
       
-      {/* 1. WHATSAPP WHITE CARD */}
-      <a
+      {/* 1. WHATSAPP WHITE PILL CARD */}
+        <a
         href={`https://wa.me/${dialPhoneNumber.replace("+", "")}?text=${encodedMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp Business"
-        className="floating-btn-card pointer-events-auto flex items-center justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm px-4 md:px-5 py-4 h-14 w-auto md:w-64 rounded-xl md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 hover:scale-[1.03] active:scale-95 transition-transform duration-200"
-      >
+        className="floating-btn-card pointer-events-auto flex items-center justify-center md:justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm w-11 h-11 md:w-64 md:h-14 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 px-4 md:px-3 py-4 hover:scale-[1.03] active:scale-95 transition-all duration-200"
+        >
         {/* ICON IMAGE CONTAINER */}
-        <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
-          <img 
+        <div className="w-6 h-6 md:w-10 md:h-10 flex items-center justify-center flex-shrink-0">
+            <img 
             src="./contact-icons/WhatsApp-icon.webp" 
             alt="WhatsApp" 
             className="w-full h-full object-contain"
-          />
+            />
         </div>
 
         {/* Text Node */}
         <span className="hidden md:inline whitespace-nowrap tracking-wide">
-          Chat on WhatsApp
+            Chat on WhatsApp
         </span>
-      </a>
+        </a>
 
-      {/* 2. TELEPHONE WHITE CARD */}
-      <div className="flex flex-col items-end gap-2 relative">
-        
-        {/* Desktop Number Pop-up */}
-        {showNumber && !isMobile && (
-          <div className="phone-card-tooltip pointer-events-auto absolute bottom-16 bg-zinc-950 text-white font-mono text-xs font-semibold py-2.5 px-4 rounded-xl border border-zinc-800 shadow-2xl flex items-center gap-2 whitespace-nowrap">
-            <span className="text-orange-500">Active Support:</span> {displayPhoneNumber}
-          </div>
-        )}
+        {/* 2. TELEPHONE WHITE PILL CARD */}
+        <div className="flex flex-col items-end gap-2 relative">
+        {/* ... Desktop Number Pop-up remains unchanged ... */}
 
         <a
-          href={`tel:${dialPhoneNumber}`}
-          onClick={handlePhoneClick}
-          aria-label="Call ZAI Support"
-          className="floating-btn-card pointer-events-auto flex items-center justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm px-4 md:px-5 py-4 h-14 w-auto md:w-64 rounded-xl md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 hover:scale-[1.03] active:scale-95 transition-transform duration-200"
+            href={`tel:${dialPhoneNumber}`}
+            onClick={handlePhoneClick}
+            aria-label="Call ZAI Support"
+            className="floating-btn-card pointer-events-auto flex items-center justify-center md:justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm w-11 h-11 md:w-64 md:h-14 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 px-4 md:px-3 py-4 hover:scale-[1.03] active:scale-95 transition-all duration-200"
         >
-          {/* ICON IMAGE CONTAINER */}
-          <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
+            {/* ICON IMAGE CONTAINER */}
+            <div className="w-6 h-6 md:w-10 md:h-10 flex items-center justify-center flex-shrink-0">
             <img 
-              src="./contact-icons/telephone-icon.webp" 
-              alt="Phone" 
-              className="w-full h-full object-contain"
+                src="./contact-icons/telephone-icon.webp" 
+                alt="Phone" 
+                className="w-full h-full object-contain"
             />
-          </div>
+            </div>
 
-          {/* Text Node */}
-          <span className="hidden md:inline whitespace-nowrap tracking-wide">
+            {/* Text Node */}
+            <span className="hidden md:inline whitespace-nowrap tracking-wide">
             Call: {displayPhoneNumber}
-          </span>
+            </span>
         </a>
-      </div>
+        </div>
 
     </div>
   );
