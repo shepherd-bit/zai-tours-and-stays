@@ -3,11 +3,12 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Transport from "./components/Transport";
 import Accommodation from "./components/Accommodation";
+import Laundry from "./components/Laundry";
 import CallToAction from "./components/CallToAction";
 import Testimonials from "./components/Testimonials";
 import AboutFounder from "./components/AboutFounder";
 import Footer from "./components/Footer";
-import FloatingContact from "./components/FloatingContact"; // Added this import
+import FloatingContact from "./components/FloatingContact";
 
 export default function App() {
   return (
@@ -18,14 +19,15 @@ export default function App() {
         <Services />
         <Transport />
         <Accommodation />
+        <Laundry />
         <CallToAction />
         <Testimonials />
         <AboutFounder />
       </main>
       <Footer />
-      
+
       {/* Global floating action layer */}
-      <FloatingContact /> 
+      <FloatingContact />
     </div>
   );
 }
