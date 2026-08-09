@@ -54,7 +54,7 @@ export default function FloatingContact() {
         className="floating-btn-card pointer-events-auto flex items-center justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm px-4 md:px-5 py-4 h-14 w-auto md:w-64 rounded-xl md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 hover:scale-[1.03] active:scale-95 transition-transform duration-200"
       >
         {/* ICON IMAGE CONTAINER */}
-        <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+        <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
           <img 
             src="./contact-icons/WhatsApp-icon.webp" 
             alt="WhatsApp" 
@@ -85,7 +85,7 @@ export default function FloatingContact() {
           className="floating-btn-card pointer-events-auto flex items-center justify-start gap-4 bg-white text-zinc-800 font-semibold text-sm px-4 md:px-5 py-4 h-14 w-auto md:w-64 rounded-xl md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-100 hover:scale-[1.03] active:scale-95 transition-transform duration-200"
         >
           {/* ICON IMAGE CONTAINER */}
-          <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
             <img 
               src="./contact-icons/telephone-icon.webp" 
               alt="Phone" 
