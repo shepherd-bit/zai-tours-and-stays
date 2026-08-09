@@ -74,7 +74,7 @@ export default function Footer() {
                 className="flex items-center gap-2.5 hover:text-white transition-colors w-fit"
               >
                 <Phone className="w-4 h-4 text-[#D98353]/80" />
-                +254 (0) 700 000 000 (WhatsApp)
+                +254745460891 (WhatsApp)
               </a>
               <div className="flex items-start gap-2.5 text-zinc-500 cursor-default">
                 <MapPin className="w-4 h-4 text-[#D98353]/80 mt-0.5 flex-shrink-0" />
